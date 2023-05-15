@@ -59,7 +59,7 @@ class platforms(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     slug = Column(String)
-    description = Column(String)
+    address = Column(String)
     city_id = Column(Integer, ForeignKey('cities.id'))
 class cities(Base):
     __tablename__ = 'cities'
