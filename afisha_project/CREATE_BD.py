@@ -63,7 +63,8 @@ class platforms(Base):
 class cities(Base):
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    name = Column(String)
+    slug = Column(String)
 
 
 
