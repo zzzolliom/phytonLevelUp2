@@ -18,7 +18,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import declarative_base
 
-engine = create_engine('sqlite:///my.db')
+engine = create_engine('sqlite:///my.db_2')
 Base = declarative_base()
 class Events(Base):
     __tablename__ = 'events'
@@ -57,7 +57,8 @@ class Type_to_genre_relation(Base):
 class platforms(Base):
     __tablename__ = 'platforms'
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    name = Column(String)
+    slug = Column(String)
     description = Column(String)
     city_id = Column(Integer, ForeignKey('cities.id'))
 class cities(Base):
