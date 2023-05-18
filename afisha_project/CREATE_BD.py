@@ -37,14 +37,14 @@ class Events(Base):
 class Event_type(Base):
     __tablename__ = 'event_type'
     id = Column(Integer,primary_key = True)
-    title = Column(String)
+    name = Column(String)
     slug = Column(String)
 
 
 class Event_genre(Base):
     __tablename__ = 'event_genre'
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    name = Column(String)
     slug = Column(String)
 
 class Type_to_genre_relation(Base):
